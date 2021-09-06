@@ -1,0 +1,20 @@
+{
+  "name": "hycod",
+  "version": "1.0.0",
+  "description": "Um projeto de uma ferramenta para uso pessoal no que consente o desenvolvimento web.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neom200/hycod.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neom200/hycod/issues"
+  },
+  "homepage": "https://github.com/neom200/hycod#readme"
+}
