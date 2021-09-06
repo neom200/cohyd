@@ -26,12 +26,11 @@ fs.open(myArgs[0], "r", (err, file) => {
             })
         }
         header.createHead(nomes_pages, dados.split(";"));
-        /*
+
         for (let i=0; i<nomes_pages.length; i++){
             fs.appendFile(`${nomes_pages[i]}.html`, "\n</html>", (err) => {
                 if (err) throw err;
             })
         }
-        */
     });
 });
