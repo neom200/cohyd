@@ -1,3 +1,4 @@
+const { throws } = require('assert');
 const { create } = require('domain');
 const fs = require('fs');
 const myArgs = process.argv.slice(2);
@@ -24,11 +25,13 @@ fs.open(myArgs[0], "r", (err, file) => {
                 if (err) throw err;
             })
         }
-        header.createHead(nomes_pages, dados.split(";")[1].trim());
+        header.createHead(nomes_pages, dados.split(";"));
+        /*
         for (let i=0; i<nomes_pages.length; i++){
             fs.appendFile(`${nomes_pages[i]}.html`, "\n</html>", (err) => {
                 if (err) throw err;
             })
         }
+        */
     });
 });
