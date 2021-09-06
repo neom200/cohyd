@@ -10,6 +10,7 @@ fs.open(myArgs[0], "r", (err, file) => {
     if (err) throw err;
     fs.readFile(file, (err,data) =>{
         if (err) throw err;
-        console.log(data.toString());
+        var dados = data.toString();
+        console.log(dados);
     });
 });
