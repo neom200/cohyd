@@ -1,5 +1,3 @@
-const { throws } = require('assert');
-const { create } = require('domain');
 const fs = require('fs');
 const myArgs = process.argv.slice(2);
 const header = require('./head_hycod');
