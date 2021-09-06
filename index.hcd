@@ -1,1 +1,5 @@
-dawdawdawdaw
+PAGES: index;
+
+HEAD=index
+    H1: [Content], [Hello World];
+ENDHEAD;

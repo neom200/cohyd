@@ -2,9 +2,8 @@
   "name": "hycod",
   "version": "1.0.0",
   "description": "Um projeto de uma ferramenta para uso pessoal no que consente o desenvolvimento web.",
-  "main": "index.js",
+  "main": "hycod.js",
   "scripts": {
-    "start": "node index.js"
   },
   "repository": {
     "type": "git",
