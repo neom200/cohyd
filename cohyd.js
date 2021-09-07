@@ -1,8 +1,8 @@
 const fs = require('fs');
 const myArgs = process.argv.slice(2);
-const header = require('./head_hycod');
+const header = require('./head_cohyd');
 
-if (myArgs[0].search(".hcd") == -1) {
+if (myArgs[0].search(".chd") == -1) {
     console.log("The file needs to have appropriate extension");
     process.exit(1);
 }

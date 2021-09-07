@@ -1,19 +1,19 @@
 {
-  "name": "hycod",
+  "name": "cohyd",
   "version": "1.0.0",
   "description": "Um projeto de uma ferramenta para uso pessoal no que consente o desenvolvimento web.",
-  "main": "hycod.js",
+  "main": "cohyd.js",
   "scripts": {
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/neom200/hycod.git"
+    "url": "git+https://github.com/neom200/cohyd.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/neom200/hycod/issues"
+    "url": "https://github.com/neom200/cohyd/issues"
   },
-  "homepage": "https://github.com/neom200/hycod#readme"
+  "homepage": "https://github.com/neom200/cohyd#readme"
 }
