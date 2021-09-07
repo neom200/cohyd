@@ -4,3 +4,8 @@ HEAD=index
 META: charset, "UTF-8";
 TITLE: My Page;
 ENDHEAD;
+
+BODY
+DIV #d1:;
+H1 (#d1) .hello: Hello World;
+ENDBODY;

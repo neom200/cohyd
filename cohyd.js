@@ -1,6 +1,7 @@
 const fs = require('fs');
 const myArgs = process.argv.slice(2);
 const header = require('./head_cohyd');
+const corpo= require('./body_cohyd');
 
 if (myArgs[0].search(".chd") == -1) {
     console.log("The file needs to have appropriate extension");
@@ -23,7 +24,10 @@ fs.open(myArgs[0], "r", (err, file) => {
                 if (err) throw err;
             })
         }
-        header.createHead(nomes_pages, dados.split(";"));
+        
+        
+        //header.createHead(nomes_pages, dados.split(";"));
+        corpo.createBody(nomes_pages, dados.split("ENDHEAD;")[1]);
 
         for (let i=0; i<nomes_pages.length; i++){
             fs.appendFile(`${nomes_pages[i]}.html`, "\n</html>", (err) => {

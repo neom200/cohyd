@@ -15,6 +15,7 @@ function analisaConteudo(content){
             string_contents += `<${x}>${y} </${x}>\n`;
         }
     })
+    string_contents += `<script src="./body_cohyd.js"></script>\n`
     return string_contents;
 }
 
