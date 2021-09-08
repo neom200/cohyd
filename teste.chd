@@ -1,6 +1,6 @@
 PAGES: index;
 
-HEAD=index
+HEAD
 META: charset, "UTF-8";
 TITLE: My Page;
 ENDHEAD;

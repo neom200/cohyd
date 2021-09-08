@@ -1,5 +1,3 @@
-const fs = require('fs');
-
 function criaElementos(file, elem){
     let conj_elems = [];
     let lista_indices = [];

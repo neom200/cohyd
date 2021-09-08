@@ -2,32 +2,34 @@ const fs = require('fs');
 
 function analisaConteudo(content){
     string_contents = ``;
+    content.pop();
+    content.pop()
     content.forEach(elem => {
         if (elem.search("META:") != -1){
             let x = elem.split(':')[0].trim();
             let y = elem.split(':')[1].trim();
             let z = y.split(',');
-            string_contents += `<${x} ${z[0].trim()}=${z[1].trim()}>\n`;
+            string_contents += `\n<${x} ${z[0].trim()}=${z[1].trim()}>`;
         }
         else if (elem.search("META:") == -1) {
             let x = elem.split(':')[0];
-            let y = elem.split(':')[1].toString().split(',')[0];
-            string_contents += `<${x}>${y} </${x}>\n`;
+            let y = elem.split(':')[1];
+            string_contents += `\n<${x}>${y}</${x}>`;
         }
     })
-    string_contents += `<script src="./body_cohyd.js"></script>\n`
+    string_contents += `\n<script src="body_cohyd.js"></script>`
     return string_contents;
 }
 
 function createHead(files, head){
-    if (head.toString().search("HEAD=") == -1){
+    if (head.toString().search("HEAD") == -1){
         console.log("you need the head");
         process.exit();
     }
     var axa = "";
     let pages_head = head.toString().split('\n');
     for (let j=0; j<pages_head.length; j++){
-        if (pages_head[j].search("HEAD=") != -1){
+        if (pages_head[j].search("HEAD") != -1){
             axa = pages_head[j];
         }
     }
@@ -45,7 +47,7 @@ function createHead(files, head){
     files.forEach(file => {
         fs.open(`${file}.html`, "a", (err, arquivo) => {
             if (err) throw err;
-            let nova_cabeca = `<head>\n${conteudo}</head>`;
+            let nova_cabeca = `\n<head>${conteudo}\n</head>`;
             fs.appendFile(arquivo, nova_cabeca, (err) => {
                 if (err) throw err;
             })

@@ -25,9 +25,8 @@ fs.open(myArgs[0], "r", (err, file) => {
             })
         }
         
-        
-        //header.createHead(nomes_pages, dados.split(";"));
-        corpo.createBody(nomes_pages, dados.split("ENDHEAD;")[1]);
+        header.createHead(nomes_pages, dados.split("BODY")[0].split(';'));
+        //corpo.createBody(nomes_pages, dados.split("ENDHEAD;")[1]);
 
         for (let i=0; i<nomes_pages.length; i++){
             fs.appendFile(`${nomes_pages[i]}.html`, "\n</html>", (err) => {
