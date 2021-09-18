@@ -17,11 +17,11 @@ function analisaConteudo(content){
             string_contents += `\n<${x}>${y}</${x}>`;
         }
     })
-    string_contents += `\n<script src="body_cohyd.js"></script>`
+    string_contents += `\n<script type="module" src="body_cohyd.js"></script>`
     return string_contents;
 }
 
-function createHead(files, head){
+export default function createHead(files, head){
     if (head.toString().search("HEAD") == -1){
         console.log("you need the head");
         process.exit();
@@ -54,5 +54,3 @@ function createHead(files, head){
         })
     });
 }
-
-exports.createHead = createHead;

@@ -21,11 +21,11 @@ function criaElementos(file, elem){
         }
         conj_elems[-1].innerHTML = conteudo_filho;
         console.log(conj_elems[-1]);
-        //document.body.appendChild(conj_elems[-1]);
+        document.body.appendChild(conj_elems[-1]);
     })
 }
 
-function createBody(file,body){
+export default function createBody(file,body){
     var cpo = body.split('\n');
     let comeco = 2;
     let fim = cpo.length - 1;
@@ -44,5 +44,3 @@ function createBody(file,body){
         criaElementos(file, elem);
     })
 }
-
-exports.createBody = createBody;
